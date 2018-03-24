@@ -1,0 +1,55 @@
+{
+  "prefix": "sz_",
+  "playerCount": 5,
+  "freeMode": true,
+  "playerInitCardsNumber": 3,
+  "watchEnabled": false,
+  "ownerReadyEnabled": true,
+  "initOnceScore": 1,
+  "addBets": [
+    [2, 4, 5, 10],
+    [2, 4, 5],
+    [100],
+    [200]
+  ],
+  "timeoutSeconds": [30, 120, 300],
+  "gameExpend": {
+    "AA": [
+      {
+        "round": 6,
+        "expend": 1
+      },
+      {
+        "round": 12,
+        "expend": 2
+      },
+      {
+        "round": 18,
+        "expend": 3
+      }
+    ],
+    "owner": [
+      {
+        "round": 6,
+        "expend": 1
+      },
+      {
+        "round": 12,
+        "expend": 2
+      },
+      {
+        "round": 18,
+        "expend": 3
+      }
+    ]
+  },
+  "multiple":{
+    "baozi":10,
+    "sunjin":5,
+    "ersanwu":10
+  },
+  "randomCards":{
+    "2":["0.2","1.2","2.2","3.2" ],
+    "3":["0.3","1.3","2.3","3.3" ]
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "ajvSchema": {
+    "type": "object",
+    "properties": {
+      "expends": { "type": "number", "minimum": 0, "maximum": 3 },
+      "moshi": {
+        "type": "object",
+        "properties": {
+          "wuzipai": { "type": "boolean", "default": false },
+          "chipai": { "type": "boolean", "default": false },
+          "ganghu": { "type": "boolean", "default": false },
+          "paohu": { "type": "boolean", "default": false },
+          "qidui": { "type": "boolean", "default": false },
+          "qidui2": { "type": "boolean", "default": false },
+          "haohuaqidui": { "type": "boolean", "default": false }
+        }
+      },
+      "jiabei": {
+        "type": "object",
+        "properties": {
+          "genzhuang": { "type": "boolean", "default": false },
+          "gangkai2": { "type": "boolean", "default": false },
+          "ganghu2": { "type": "boolean", "default": false }
+        }
+      },
+      "chengbao": {
+        "type": "object",
+        "properties": {
+          "luodi": { "type": "boolean", "default": false },
+          "gangkai": { "type": "boolean", "default": false },
+          "qianggang": { "type": "boolean", "default": false }
+        }
+      },
+      "laizi": { "type": "number", "minimum": 0, "maximum": 2 }
+    },
+    "required": [ "expends", "laizi" ]
+  },
+  "server": {
+    "game": "",
+    "type": "tdh",
+    "playerCount": 4,
+    "gameExpend": {
+      "AA": [{
+        "round": 6,
+        "expend": 1
+      }, {
+        "round": 16,
+        "expend": 4
+      }],
+      "owner": [{
+        "round": 1,
+        "expend": 2
+      }, {
+        "round": 16,
+        "expend": 4
+      }]
+    },
+    "initCards": {
+     "wbt": [1, 2],
+     "zfb": true,
+     "wind": true,
+     "flower": true,
+     "special": [[2, 10], [3, 12]]
+    },
+    "playerInitCards": 13,
+    "triggers": {
+      "input": {
+        "hookExpr": "",
+        "scope": "all",
+        "score": { "type": "in", "scope": "", "tag": "teshu", "name": "海底捞月" },
+        "actions": [[],["zhang", "chi", "peng", "bugang", "hu"], ["peng", "bugang", "hu"], ["peng", "bugang", "hu"]],
+        "nextTrigger": "chipeng",
+        "needHook": true
+      },
+      "chipeng": {
+        "scope": "self",
+        "actions": [["angang", "bugang", "hu"]]
+      },
+      "output": {
+        "scope": "self",
+        "score": { "type": "in", "scope": "", "tag": "teshu", "name": "海底捞月" },
+        "actions": [["angang", "bugang", "hu"]],
+        "nextTrigger": "qiangganghu",
+        "needHook": true
+      },
+      "ganghu": {
+        "hookExpr": "isGang",
+        "scope": "others",
+        "score": { "type": "in", "scope": "", "tag": "teshu", "name": "海底捞月" },
+        "actions": [["hu"], ["hu"], ["hu"]]
+      } 
+    },
+    "actions": {
+      "zhang": { "type": 0, "subType": 0, "filterExpr": "", "testExpr": "testZhang", "actionExpr": "actionZhang", "enabled": true },
+      "chi": { "type": 1, "subType": 0, "filterExpr": "", "testExpr": "testChi", "actionExpr": "actionChi", "enabled": true },
+      "peng": { "type": 2, "subType": 0, "filterExpr": "", "testExpr": "testPeng", "actionExpr": "actionPeng", "enabled": true  },
+      "angang": { "type": 3, "subType": 0, "filterExpr": "", "testExpr": "testAnGang", "actionExpr": "actionAnGang", "enabled": true, "score": 5},
+      "diangang": { "type": 3, "subType": 1, "filterExpr": "", "testExpr": "testDianGang", "actionExpr": "actionDianGang", "enabled": true, "score": { "type": "all", "value": 5} },
+      "bugang": { "type": 3, "subType": 2, "filterExpr": "", "testExpr": "testBuGang", "actionExpr": "actionBuGang", "enabled": true, "score": {"type": "all", "value": 2}  },
+      "luangang": { "type": 3, "subType": 3, "filterExpr": "", "testExpr": "testLuanGang", "actionExpr": "actionLuanGang", "enabled": true, "score": {"type": "all", "value": 2}},
+      "hu": { "type": 4, "subType": 0, "filterExpr": "isQueMen", "testExpr": "", "actionExpr": "", "enabled": true }
+    },
+    "strategy": {
+      "banker": "default",
+      "over": "default"
+    },
+    "comboMode": "one",
+    "combo": [
+      {"name": "平胡", "funcExpr": "pinghu", "value": 1},
+      {"name": "碰碰胡", "funcExpr": "pengpenghu", "value": 2},
+      {"name": "天胡", "funcExpr": "pengpenghu", "value": 2},
+      {"name": "地胡", "funcExpr": "pengpenghu", "value": 2},
+      {"name": "七对清一色", "funcExpr": "pengpenghu", "value": 128}
+    ],
+    "events":  [
+      {"name": "庄家胡牌", "event": "onPlayerTing", "time": "once", "filterExpr": "", "score": { "type": "all", "value": 2}},
+      {"name": "庄家胡牌", "event": "onPlayerHu", "filterExpr": "", "score": { "type": "in", "scope": "", "value": 2, "tag": "teshu", "name": "海底捞月"}},
+      {"name": "自摸", "event": "onPlayerHu", "filterExpr": "", "score": 2},
+      {"name": "杠上开花", "event": "onPlayerHu", "filterExpr": "", "score": 2 },
+      {"name": "抢杠胡", "event": "onPlayerGangHu", "filterExpr": "", "score": {"type": "one", "value": 2}},
+      {"name": "呼叫转移", "event": "onPlayerGangHu", "filterExpr": "", "funcExpr": "gangzhuanyi"},
+      {"name": "退税", "event": "onGameOver", "filterExpr": "", "funcExpr": "gangzhuanyi"}
+    ],
+    "tags": {
+      "teshu": "特殊分项",
+      "combo": "牌型",
+      "gang": "杠分"
+    },
+    "score": {
+      "formula": "default",
+      "formulas": {
+        "default": "mjapi.formula.nanchongMJFormula(params)"
+      }
+    },
+
+    "playback": {
+      "enabled": true,
+      "events": []
+    }
+  }
+}

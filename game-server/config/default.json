@@ -1,0 +1,118 @@
+{
+  "mongo": {
+    "url": "mongodb://localhost:27017/chess"
+  },
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "defaultDB": 1,
+    "rankDB": 2,
+    "password": "",
+    "prefix": "PS:"
+  },
+  "log": {
+    "console": {
+      "level": "debug",
+      "silent": false,
+      "colorize": true
+    },
+    "mongodb": {
+      "level": "info",
+      "silent": false,
+      "db": "mongodb://localhost:27017/log",
+      "options": {
+        "poolSize": 2, 
+        "autoReconnect": true
+      },
+      "collection": "gamelog",
+      "storeHost": true,
+      "tryReconnect": true
+    },
+    "dailyRotateFile": {
+      "level": "info",
+      "silent": false,
+      "filename": "./logs/log",
+      "datePattern": "yyyy-MM-dd.",
+      "prepend": true,
+      "localTime": true,
+      "handleExceptions": true
+    },
+    "mail": {
+      "name": "logError",
+      "to": "dengzhao@hymail.zjstonetower.com",
+      "from": "dengzhao@hymail.zjstonetower.com",
+      "host": "smtp.exmail.qq.com",
+      "port": 465,
+      "username": "dengzhao@hymail.zjstonetower.com",
+      "password": "4343c369zL3GhX38",
+      "level": "error",
+      "unique": true,
+      "silent": false,
+      "handleExceptions": true,
+      "html": true,
+      "ssl": true,
+      "subject": "default: {{level}} {{msg}}"
+    }
+  },
+  "rpcPort": 3003,
+  "keen": {
+    "projectId": "5a7169edc9e77c00011f7a15",
+    "writeKey": "7F2CA28C41EA9BB589810232247BB0D2B054246616EE08B7EE8C1FA0C0C4D713F6DF4DBF4C353A9758B5AC7B3092814B34D48F675D64E7D923762BAE399D2F2871DF88E030918FF8A7785413FAB70A224BF788A4CB8D6DFE0EA5A88B48F201C9"
+  },
+  "oss": {
+    "region": "oss-cn-beijing",
+    "accessKeyId": "LTAIaUmnPzbXefKr",
+    "accessKeySecret": "Pk83XgKKSMk7YyCKZxxpBvpiWkQV9a",
+    "bucket": "chess-dev"
+  },
+  "raven": "https://e097d8c324244efaa5a0760c6ec23b76:ee8226142d3242a1912e4c163fa2733b@sentry.io/272164",
+  "gaodeKey": "90bf5201461af4fc28af78877ea893de",
+  "gameFake": {
+    "url": "http://58.87.101.14:3004/",
+    "enabled": true
+  },
+  "data": {
+    "pattern": "local",
+    "url": "http://chessdev.369qipai.net/data/",
+    "path": "./data/",
+    "remoteConfigURL": "http://chessdev.369qipai.net/data/config.json",
+    "localConfigPath": "./data/config.json",
+    "list": {
+      "friendGame": "friendGame.json",
+      "friendPokerGame": "friendPokerGame.json",
+      "friendDoudizhuGame":"friendDoudizhuGame.json",
+      "ddz2":"ddz2.json",
+      "ddz4":"ddz4.json",
+      "ddz3":"ddz3.json",
+      "lz3":"lz3.json",
+      "pz3":"pz3.json",
+      "sd3":"sd3.json",
+      "tdlz3":"tdlz3.json",
+      "sanzhang":"sanzhang.json",
+      "sichuan_nanchong":"sichuan_nanchong.json",
+      "sichuan_xuezhandaodi":"sichuan_xuezhandaodi.json",
+      "friendSanZhangGame": "friendSanZhangGame.json"
+    }
+  },
+  "game": {
+    "readySeconds": 10
+  },
+  "friendGame": {
+    "dissolveMinutes": 1,
+    "createRoomLimit": 10,
+    "autoDestroyMinutes": 720,
+    "fakeEnabled": true
+  },
+  "whiteList": [],
+  "fakeDataURL": "",
+  "friendGameConfig": {
+    "dissolveMinutes": 1
+  },
+  "esearch": {
+    "host": "192.168.221.38",
+    "auth": "elastic:changeme",
+    "protocol": "http",
+    "port": 9200,
+    "log": "trace"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "mongo": {
+    "url": "mongodb://192.168.221.37:27017/chess"
+  },
+  "redis": {
+    "host": "192.168.221.37",
+    "port": 6379,
+    "defaultDB": 1,
+    "rankDB": 2,
+    "password": "",
+    "prefix": "PS:"
+  },
+  "log": {
+    "console": {
+      "level": "debug",
+      "silent": true,
+      "colorize": true
+    },
+    "mongodb": {
+      "level": "info",
+      "silent": true,
+      "db": "mongodb://192.168.221.37:27017/log",
+      "options": {
+        "poolSize": 2, 
+        "autoReconnect": true
+      },
+      "collection": "gamelog",
+      "storeHost": true,
+      "tryReconnect": true
+    }
+  }
+}

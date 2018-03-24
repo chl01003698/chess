@@ -1,0 +1,14 @@
+{
+  "common": {
+    "shareAward": {
+      "limit": 2,
+      "card": 2
+    }
+  },
+  "client": {
+
+  },
+  "server": {
+    
+  }
+}

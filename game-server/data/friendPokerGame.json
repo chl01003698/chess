@@ -1,0 +1,22 @@
+{
+  "playerCount": 2,
+  "initCardsNumber": 17,
+  "type": "poker",
+  "allCardIds": [],
+  "cardsBegin": 3,
+  "cardsEnd": 16,
+  "few": 1,
+  "gameExpend": [
+    {
+      "round": 2,
+      "expend": 2,
+      "AAExpend": 1
+    }, {
+      "round": 16,
+      "expend": 4,
+      "AAExpend": 2
+    }
+  ],
+  "record": true,
+  "kick": true
+}

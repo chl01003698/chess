@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const pokerAlgo_1 = require("../app/games/poker/pokerAlgo/pokerAlgo");
+const sanRenDiZhuAlgo_1 = require("../app/games/poker/pokerAlgo/doudizhu/sanRenDiZhuAlgo");
+debugger;
+var a = 1;
+var b = 2;
+console.log(a + b);
+const algo = new sanRenDiZhuAlgo_1.SanRenDiZhuAlgo();
+// let arr = algo.getCardsType() ;
+const arr = pokerAlgo_1.PokerAlgo.createCardsFromIds(['0.3', '1.3']);
+const arr1 = pokerAlgo_1.PokerAlgo.createCardsFromIds(['0.3', '1.3', '2.3', '0.4', '1.4', '2.4', '3.4', '0.5', '1.5']);
+const num = sanRenDiZhuAlgo_1.SanRenDiZhuAlgo.getCardsType(arr);
+const arr2 = sanRenDiZhuAlgo_1.SanRenDiZhuAlgo.prompt(arr, arr1);
+console.log(arr2);

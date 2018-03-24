@@ -1,0 +1,160 @@
+{
+    "game": "doudizhu",
+    "type": "ddz2",
+    "title": "两人玩法",
+    "docURL": "",
+    "rowSchema": {},
+    "rows": [],
+    "specificRows": [ ],
+    "ajvSchema": {
+      "type": "object",
+      "properties": {
+        "expends": { "type": "number", "minimum": 0, "maximum": 3 },
+        "moshi": {
+          "type": "object",
+          "properties": {
+            "baseScore": { "type": "array", "items":{"type":"number"},"default": [0] }, 
+            "score":{"type":"number","default":1},
+            "cardLandlord":{"type":"array","items":{"type":"number"},"default":[1]},
+            "letCards":{"type":"array","items":{"type":"number"},"default":[1]},
+            "sendCards":{"type":"array","items":{"type":"number"},"default":[1]},
+            "graspBottom":{"type":"array","items":{"type":"number"},"default":[1]},
+            "JiPaiQi":{"type":"array","items":{"type":"number"},"default":[1]},
+            "article3":{"type":"array","items":{"type":"number"},"default":[]},
+            "plane":{"type":"array","items":{"type":"number"},"default":[]},
+            "remaining":{"type":"array","items":{"type":"number"},"default":[1]},
+            "four":{"type":"array","items":{"type":"number"},"default":[]},
+            "defaultSelet":{"type":"object","default":{}},
+            "peipai":{"type":"array","items":{"type":"string"},"default":[]},
+            "gsp":{"type":"array","items":{"type":"string"},"default":[]}
+          }
+        }
+    }
+    },
+    "share": {
+      "playerCount": 2,
+      "gameExpend": {
+        "AA": [
+          {
+            "round": 12,
+            "expend": 2
+          },
+          {
+            "round": 18,
+            "expend": 3
+          },
+          {
+            "round": 24,
+            "expend": 4
+          }
+        ],
+        "owner": [
+          {
+            "round": 12,
+            "expend": 2
+          },
+          {
+            "round": 18,
+            "expend": 3
+          },
+          {
+            "round": 24,
+            "expend": 4
+          }
+        ]
+      }
+    },
+    "client": {
+  
+    },
+    "server": {
+      "playerCount": 2,
+      "playerCardsNumber": 17,
+      "sdplayerCardsNumber": 13,
+      "LowCards": 3,
+      "cardsBegin": 3,
+      "cardsEnd": 16,
+      "few": 1,
+      "multiple": {
+        "grabLandlordMultiple": 2,
+        "pushMultiple": 2,
+        "graspBottomMultiple": {
+          "pairs": 2,
+          "article3": 3,
+          "flowers": 3,
+          "shunzi": 3,
+          "doubleKing": 3,
+          "king": 2
+        },
+        "showMultiple": 5,
+        "bomb": 2,
+        "spring": 2,
+        "rockets": 2,
+        "tmpMultiple": 1,
+        "zmul": 3,
+        "fourRocket":3,
+        "lanzhua":4,
+        "yingzha":4,
+        "ruanzha":2,
+        "lianzha":8
+      },
+      "playback": {
+        "enabled": true,
+        "events": [
+          "dz_onMultiple",
+          "dz_onOutput_",
+          "dz_onShowCard",
+          "dz_onGameStart",
+          "dz_onMakeLandlord_",
+          "dz_startInput",
+          "dz_onInput",
+          "dz_onCallZhuang",
+          "dz_onRadio",
+          "dz_onLiuJu",
+          "dz_kickPush",
+          "dz_onResult",
+          "dz_onJiPaiQi"
+        ]
+      },
+      "gameExpend": {
+        "AA": [
+          {
+            "round": 12,
+            "expend": 2
+          },
+          {
+            "round": 18,
+            "expend": 3
+          },
+          {
+            "round": 24,
+            "expend": 4
+          }
+        ],
+        "owner": [
+          {
+            "round": 12,
+            "expend": 2
+          },
+          {
+            "round": 18,
+            "expend": 3
+          },
+          {
+            "round": 24,
+            "expend": 4
+          }
+        ]
+      },
+      "ridDDZ2Cards": [
+        "03",
+        "13",
+        "23",
+        "33",
+        "04",
+        "14",
+        "24",
+        "34"
+      ]
+    }
+  }

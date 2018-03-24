@@ -1,0 +1,37 @@
+{
+  "//": "游戏是否限免",
+  "free": false,
+  "//": "游戏最大玩家数",
+  "playerCount": 2,
+  "initCardsNumber": 17,
+  "type": "poker",
+  "allCardIds": [],
+  "gameExpend": {
+    "AA": [
+      {
+        "round": 6,
+        "expend": 1
+      }, {
+        "round": 16,
+        "expend": 4
+      }
+    ],
+    "owner": [
+      {
+        "round": 1,
+        "expend": 2
+      }, {
+        "round": 16,
+        "expend": 4
+      }
+    ]
+  },
+  "kick": true,
+  "playback": {
+    "enabled": false,
+    "events": []
+  },
+  "rank": {
+    "enabled": false
+  }
+}

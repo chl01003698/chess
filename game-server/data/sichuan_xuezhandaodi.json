@@ -1,0 +1,208 @@
+{
+  "game": "sichuan",
+  "type": "nanchong",
+  "title": "南充",
+  "docURL": "",
+  "rowSchema": {
+    "moshi": { "name": "moshi", "title": "模式", "type": "group", "tip": "提示信息", "class": "array", "column": 4, "children": [
+      { "name": "wuzipai", "title": "无字牌", "type": "check", "default": false, "required": true, "tip": "提示信息" },
+      { "name": "chipai", "title": "可以吃牌", "type": "check", "default": false, "required": true, "tip": "提示信息" },
+      { "name": "ganghu", "title": "可抢杠胡", "type": "check", "default": false, "required": true, "tip": "提示信息" },
+      { "name": "paohu", "title": "可点炮胡", "type": "check", "default": false, "required": true, "tip": "提示信息" },
+      { "name": "qidui", "title": "可胡七对", "type": "check", "default": false, "required": true, "tip": "提示信息" },
+      { "name": "qidui2", "title": "七对*2倍", "type": "check", "default": false, "required": true, "tip": "提示信息" },
+      { "name": "haohuaqidui", "title": "豪华七对*4倍", "type": "check", "default": false, "required": true, "tip": "提示信息" }
+    ]}
+  },
+  "rows": [
+    { "name": "expends", "title": "局数", "type": "radio", "options": [{ "title": "4局", "data": {"expend": 2, "AA": 1}}], "default": 2, "required": true, "tip": "提示信息", "column": 4 },
+    { "name": "moshi", "type": "ref", "schema": "moshi1" },
+    { "name": "jiabei", "title": "加倍", "type": "group", "tip": "提示信息", "class": "object", "column": 3, "children": [
+      { "name": "genzhuang", "title": "跟庄", "type": "check", "default": true, "required": true, "tip": "提示信息" },
+      { "name": "gangkai2", "title": "杠开*2", "type": "check", "default": false, "required": true, "tip": "提示信息" },
+      { "name": "ganghu2", "title": "抢杠胡*2", "type": "check", "default": false, "required": true, "tip": "提示信息" }
+    ]},
+    { "type": "line" },
+    { "name": "chengbao", "title": "承包", "type": "group", "tip": "提示信息", "column": 3, "children": [
+      { "name": "luodi", "title": "12张落地承包", "type": "check", "default": true, "value": 3, "required": true, "tip": "提示信息" },
+      { "name": "gangkai", "title": "放杠杠开承包", "type": "check", "default": false, "value": 4, "required": true, "tip": "提示信息" },
+      { "name": "qianggang", "title": "抢杠承包", "type": "check", "default": false, "value": 5, "required": true, "tip": "提示信息" }
+    ]},
+    { "name": "laizi", "title": "癞子", "type": "combo", "options": ["红中癞子", "翻赖子", "没有癞子"], "default": 0, "required": true, "tip": "提示信息" }
+  ],
+  "specificRows": [
+    { "name": "rounds", "title": "局数", "type": "radio", "options": ["1局", "2局", "3局"], "default": 0, "required": true, "tip": "提示信息", "column": 4 },
+    { "name": "moshi", "title": "模式", "type": "group", "tip": "提示信息", "class": "array", "column": 4, "children": [
+      { "name": "wuzipai", "title": "无字牌", "type": "check", "default": false, "required": true, "tip": "提示信息" },
+      { "name": "chipai", "title": "可以吃牌", "type": "check", "default": false, "required": true, "tip": "提示信息" },
+      { "name": "ganghu", "title": "可抢杠胡", "type": "check", "default": false, "required": true, "tip": "提示信息" },
+      { "name": "paohu", "title": "可点炮胡", "type": "check", "default": false, "required": true, "tip": "提示信息" },
+      { "name": "qidui", "title": "可胡七对", "type": "check", "default": false, "required": true, "tip": "提示信息" },
+      { "name": "qidui2", "title": "七对*2倍", "type": "check", "default": false, "required": true, "tip": "提示信息" },
+      { "name": "haohuaqidui", "title": "豪华七对*4倍", "type": "check", "default": false, "required": true, "tip": "提示信息" }
+    ]},
+    { "name": "jiabei", "title": "加倍", "type": "group", "tip": "提示信息", "class": "object", "column": 3, "children": [
+      { "name": "genzhuang", "title": "跟庄", "type": "check", "default": true, "required": true, "tip": "提示信息" },
+      { "name": "gangkai2", "title": "杠开*2", "type": "check", "default": false, "required": true, "tip": "提示信息" },
+      { "name": "ganghu2", "title": "抢杠胡*2", "type": "check", "default": false, "required": true, "tip": "提示信息" }
+    ]},
+    { "type": "line" },
+    { "name": "chengbao", "title": "承包", "type": "group", "tip": "提示信息", "column": 3, "children": [
+      { "name": "luodi", "title": "12张落地承包", "type": "check", "default": true, "value": 3, "required": true, "tip": "提示信息" },
+      { "name": "gangkai", "title": "放杠杠开承包", "type": "check", "default": false, "value": 4, "required": true, "tip": "提示信息" },
+      { "name": "qianggang", "title": "抢杠承包", "type": "check", "default": false, "value": 5, "required": true, "tip": "提示信息" }
+    ]},
+    { "name": "laizi", "title": "癞子", "type": "combo", "options": ["红中癞子", "翻赖子", "没有癞子"], "default": 0, "required": true, "tip": "提示信息" }
+  ],
+  "share": {
+    "playerCount": 4,
+    "gameExpend": {
+      "AA": [{
+        "round": 6,
+        "expend": 1
+      }, {
+        "round": 16,
+        "expend": 4
+      }],
+      "owner": [{
+        "round": 1,
+        "expend": 2
+      }, {
+        "round": 16,
+        "expend": 4
+      }]
+    }
+  },
+  "client": {
+
+  },
+  "server": {
+    "initCards": {
+     "wtb": [0, 1, 2],
+     "zfb": true,
+     "wind": true,
+     "flower": false,
+     "special": []
+    },
+    "playerCount": 4,
+    "playerInitCards": 13,
+    "triggers": {
+      "input": {
+        "hookExpr": "",
+        "scope": "all",
+        "actions": [[],["zhang", "chi", "peng", "diangang", "hu"], ["peng", "diangang", "hu"], ["peng", "diangang", "hu"]],
+        "nextTrigger": "chipeng",
+        "needHook": false
+      },
+      "chipeng": {
+        "scope": "self",
+        "actions": [["angang", "bugang"]],
+        "nextTrigger": "qiangganghu",
+        "needHook": true
+      },
+      "output": {
+        "scope": "self",
+        "score": { "type": "in", "scope": "one", "tag": "teshu"},
+        "actions": [["angang", "bugang", "hu"]],
+        "nextTrigger": "qiangganghu",
+        "needHook": true
+      },
+      "qiangganghu": {
+        "hookExpr": "mjapi.trigger.qiangganghu(params)",
+        "scope": "others",
+        "actions": [["hu"], ["hu"], ["hu"]]
+      } 
+    },
+    "actions": {
+      "zhang": { "type": 0, "subType": 0, "filterExpr": "mjapi.action.filterZhang(params)", "testExpr": "mjapi.action.testZhang(params)", "actionExpr": "mjapi.action.actionZhang(params)", "enabled": true },
+      "chi": { "type": 1, "subType": 0, "filterExpr": "mjapi.action.filterChi(params)", "testExpr": "mjapi.action.testChi(params)", "actionExpr": "mjapi.action.actionChi(params)", "enabled": true },
+      "peng": { "type": 2, "subType": 0, "filterExpr": "mjapi.action.filterPeng(params)", "testExpr": "mjapi.action.testPeng(params)", "actionExpr": "mjapi.action.actionPeng(params)", "enabled": true  },
+      "angang": { "type": 3, "subType": 0, "filterExpr": "mjapi.action.filterAnGang(params)", "testExpr": "mjapi.action.testAnGang(params)", "actionExpr": "mjapi.action.actionAnGang(params)", "enabled": true, "score": 5},
+      "diangang": { "type": 3, "subType": 1, "filterExpr": "mjapi.action.filterDianGang(params)", "testExpr": "mjapi.action.testDianGang(params)", "actionExpr": "mjapi.action.actionDianGang(params)", "enabled": true, "score": { "type": "all", "value": 5} },
+      "bugang": { "type": 3, "subType": 2, "filterExpr": "mjapi.action.filterBuGang(params)", "testExpr": "mjapi.action.testBuGang(params)", "actionExpr": "mjapi.action.actionBuGang(params)", "enabled": true, "score": {"type": "all", "value": 2}  },
+      "luangang": { "type": 3, "subType": 3, "filterExpr": "mjapi.action.filterLuanGang(params)", "testExpr": "mjapi.action.testLuanGang(params)", "actionExpr": "mjapi.action.actionLuanGang(params)", "enabled": true, "score": {"type": "all", "value": 2}},
+      "hu": { "type": 4, "subType": 0, "filterExpr": "mjapi.action.filterHu(params)", "testExpr": "mjapi.action.testHu(params)", "actionExpr": "mjapi.action.actionHu(params)", "enabled": true },
+      "huShiSanYao": { "type": 4, "subType": 1, "filterExpr": "mjapi.action.filterHuShiSanYao(params)", "testExpr": "mjapi.action.testHuShiSanYao(params)", "actionExpr": "mjapi.action.actionHu(params)", "enabled": true },
+      "huShiSanBuKao": { "type": 4, "subType": 2, "filterExpr": "mjapi.action.filterHuShiSanBuKao(params)", "testExpr": "mjapi.action.testHuShiSanBuKao(params)", "actionExpr": "mjapi.action.actionHu(params)", "enabled": true }
+    },
+    "strategy": {
+      "banker": "default",
+      "over": "default"
+    },
+    "comboMode": "all",
+    "combo": [
+      {"name":"清一色" ,"funcExpr":"mjapi.combo.qingYiSe(params)","score": 2},
+      {"name":"七对" ,"funcExpr":"mjapi.combo.qiDui(params)","score":1},
+      {"name":"平胡" ,"funcExpr":"mjapi.combo.pingHu(params)","score":1},
+      {"name":"对对胡" ,"funcExpr":"mjapi.combo.duiDuiHu(params)","score":1},
+      {"name":"清一色对对胡" ,"funcExpr":"mjapi.combo.qingYiSeDaDuiZi(params)","score":1},
+      {"name":"缺一门" ,"funcExpr":"mjapi.combo.queYiMen(params)","score":1},
+      {"name":"将将胡" ,"funcExpr":"mjapi.combo.jiangJiangHu(params)","score":1},
+      {"name":"一条龙" ,"funcExpr":"mjapi.combo.yiTiaoLong(params)","score":1},
+      {"name":"清一条龙" ,"funcExpr":"mjapi.combo.qingYiTiaoLong(params)","score":1},
+      {"name":"清七对" ,"funcExpr":"mjapi.combo.qingQiDui(params)","score":1},
+      {"name":"将七对" ,"funcExpr":"mjapi.combo.jiangQiDui(params)","score":1},
+      {"name":"双龙七对" ,"funcExpr":"mjapi.combo.shuangLongQiDui(params)","score":1},
+      {"name":"三龙七对" ,"funcExpr":"mjapi.combo.sanLongQiDui(params)","score":1},
+      {"name":"龙七对" ,"funcExpr":"mjapi.combo.longQiDui(params)","score":1},
+      {"name":"清双龙七对" ,"funcExpr":"mjapi.combo.qingShuangLongQiDui(params)","score":1},
+      {"name":"清三龙七对" ,"funcExpr":"mjapi.combo.qingSanLongQiDui(params)","score":1},
+      {"name":"清龙七对" ,"funcExpr":"mjapi.combo.qingLongQiDui(params)","score":1},
+      {"name":"金钩钓" ,"funcExpr":"mjapi.combo.jinGouDiao(params)","score":1},
+      {"name":"将金钩钓" ,"funcExpr":"mjapi.combo.jiangJinGouDiao(params)","score":1},
+      {"name":"清金钩钓" ,"funcExpr":"mjapi.combo.qingJinGouDiao(params)","score":1},
+      {"name":"字一色" ,"funcExpr":"mjapi.combo.ziYiSe(params)","score":1},
+      {"name":"混一色" ,"funcExpr":"mjapi.combo.hunYiSe(params)","score":1},
+      {"name":"大三元" ,"funcExpr":"mjapi.combo.daSanYuan(params)","score":1},
+      {"name":"小三元" ,"funcExpr":"mjapi.combo.xiaoSanYuan(params)","score":1},
+      {"name":"十八罗汉" ,"funcExpr":"mjapi.combo.shiBaLuoHan(params)","score":1},
+      {"name":"清十八罗汉" ,"funcExpr":"mjapi.combo.qingShiBaLuoHan(params)","score":1},
+      {"name":"十三幺" ,"funcExpr":"mjapi.combo.shiSanYao(params)","score":1},
+      {"name":"十三不靠" ,"funcExpr":"mjapi.combo.shiSanBuKao(params)","score":1},
+      {"name":"软十三不靠" ,"funcExpr":"mjapi.combo.ruanShiSanBuKao(params)","score":1},
+      {"name":"全幺九" ,"funcExpr":"mjapi.combo.quanYaoJiu(params)","score":1},
+      {"name":"混幺九" ,"funcExpr":"mjapi.combo.hunYaoJiu(params)","score":1},
+      {"name":"带幺九" ,"funcExpr":"mjapi.combo.daiYaoJiu(params)","score":1},
+      {"name":"清三搭" ,"funcExpr":"mjapi.combo.qingSanDa(params)","score":1}
+    ],
+    "events":  [
+      {"name": "补杠杠上开花", "event": "onPlayerHu", "filterExpr": "mjapi.event.buGangShangHua(params)", "score": { "scope": "one", "name":"buGangShangHua", "value": 2} },
+      {"name": "暗杠杠上开花", "event": "onPlayerHu", "filterExpr": "mjapi.event.anGangShangHua(params)", "score": { "scope": "one", "name":"anGangShangHua", "value": 2} },
+      {"name": "自摸", "event": "onPlayerHu", "filterExpr": "mjapi.event.ziMoHu(params)", "score": { "scope": "one", "name":"zimo", "value": 2}},
+      {"name": "点炮", "event": "onPlayerHu", "filterExpr": "mjapi.event.dianPaoHu(params)", "score": { "scope": "one", "name":"dianPao", "value": 2}},
+
+      {"name": "庄家胡牌", "event": "onPlayerTing", "time": "once", "filterExpr": "", "score": { "type": "all", "value": 2}},
+      {"name": "庄家胡牌", "event": "onPlayerHu", "filterExpr": "mjapi.event.zhuangHu(params)", "score": { "type": "all", "value": 2}},
+      {"name": "杠后点炮", "event": "onPlayerHu", "filterExpr": "mjapi.event.gangHouPao(params)", "score": { "type": "one", "name":"gangHouPao", "value": 1} },
+      {"name": "抢杠胡", "event": "onPlayerHu", "filterExpr": "mjapi.event.qiangGangHu(params)", "score": {"type": "one", "value": 2}},
+      {"name": "扫底胡", "event": "onPlayerHu", "filterExpr": "mjapi.event.saoDiHu(params)", "score": {"type": "one", "value": 2}},
+      {"name": "海底炮", "event": "onPlayerHu", "filterExpr": "mjapi.event.haiDiPao(params)", "score": {"type": "one", "value": 2}},
+      {"name": "呼叫转移", "event": "onPlayerGangHu", "filterExpr": "mjapi.event.gangZhuanYi(params)", "funcExpr": "gangzhuanyi"},
+      {"name": "退税", "event": "onGameOver", "filterExpr": "mjapi.event.tuiShui(params)", "funcExpr": "gangzhuanyi"}
+    ],
+    "rule":[
+      {"name":"buGangShangHua","desc":"补杠杠上花算点炮","type":"convert", "sourceName":"buGangShangHua","toTargetName":"dianpao"},
+      {"name":"anGangShangHua","desc":"暗杠杠上花算点炮","type":"convert", "sourceName":"anGangShangHua","toTargetName":"dianpao"},
+      {"name":"menQing","desc":"门清","type":"check", "funcExpr":"mjapi.rule.menQing(params)","score":1},
+      {"name":"genAndGang","desc":"有杠根","type":"check", "funcExpr":"mjapi.rule.genAndGang(params)","score":1},
+      {"name":"genRemoveGang","desc":"无杠根","type":"check", "funcExpr":"mjapi.rule.genRemoveGang(params)","score":1}
+    ],
+    "score1": {
+      "formula": "default",
+      "formulas": {
+        "default": "maxBy([max(paixing), add(teshu)], 'value') + add(gang) + ewai"
+      }
+    },
+    "score": {
+      "formula": "default",
+      "formulas": {
+        "default": "mjapi.formula.nanchongMJFormula(params)"
+      }
+    },
+
+    "playback": {
+      "enabled": true,
+      "events": []
+    }
+  }
+}

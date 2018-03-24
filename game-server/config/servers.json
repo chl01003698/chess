@@ -1,0 +1,150 @@
+{
+	"development": {
+		"gate": [
+			{
+				"host": "127.0.0.1",
+				"port": "2950++",
+				"clientHost": "192.168.225.107",
+				"clientPort": "3000++",
+				"frontend": true,
+				"clusterCount": 1,
+				"args": "--inspect=5860"
+			}
+		],
+		"connector": [
+			{
+				"host": "127.0.0.1",
+				"port": "3150++",
+				"clientHost": "192.168.225.107",
+				"clientPort": "3010++",
+				"frontend": true,
+				"clusterCount": 1,
+				"args": "--inspect=5870"
+			}
+		],
+		"fgame": [
+			{
+				"host": "127.0.0.1",
+				"port": "3250++",
+				"clusterCount": 1,
+				"args": "--inspect=5880"
+			}
+		],
+		"user": [
+			{
+				"host": "127.0.0.1",
+				"port": "3350++",
+				"clusterCount": 1,
+				"args": "--inspect=5890"
+			}
+		]
+	},
+	"alpha": {
+		"gate": [
+			{
+				"host": "127.0.0.1",
+				"port": "2950++",
+				"clientHost": "192.168.225.107",
+				"clientPort": "3000++",
+				"frontend": true,
+				"clusterCount": 1
+			}
+		],
+		"connector": [
+			{
+				"host": "127.0.0.1",
+				"port": "3150++",
+				"clientHost": "192.168.225.107",
+				"clientPort": "3010++",
+				"frontend": true,
+				"clusterCount": 2
+			}
+		],
+		"fgame": [
+			{
+				"host": "127.0.0.1",
+				"port": "3250++",
+				"clusterCount": 1
+			}
+		],
+		"user": [
+			{
+				"host": "127.0.0.1",
+				"port": "3350++",
+				"clusterCount": 1
+			}
+		]
+	},
+	"beta": {
+		"gate": [
+			{
+				"host": "172.17.226.116",
+				"port": "2950++",
+				"clientHost": "39.107.93.229",
+				"clientPort": "3000++",
+				"frontend": true,
+				"clusterCount": 1
+			}
+		],
+		"connector": [
+			{
+				"host": "172.17.226.115",
+				"port": "3150++",
+				"clientHost": "39.107.99.104",
+				"clientPort": "3010++",
+				"frontend": true,
+				"clusterCount": 4
+			}
+		],
+		"fgame": [
+			{
+				"host": "172.17.226.117",
+				"port": "3250++",
+				"clusterCount": 4
+			}
+		],
+		"user": [
+			{
+				"host": "172.17.226.116",
+				"port": "3350++",
+				"clusterCount": 3
+			}
+		]
+	},
+	"production": {
+		"gate": [
+			{
+				"host": "192.168.221.37",
+				"port": "2950++",
+				"clientHost": "192.168.221.37",
+				"clientPort": "3000++",
+				"frontend": true,
+				"clusterCount": 1
+			}
+		],
+		"connector": [
+			{
+				"host": "192.168.221.41",
+				"port": "3150++",
+				"clientHost": "192.168.221.41",
+				"clientPort": "3010++",
+				"frontend": true,
+				"clusterCount": 2
+			}
+		],
+		"fgame": [
+			{
+				"host": "192.168.221.41",
+				"port": "3250++",
+				"clusterCount": 2
+			}
+		],
+		"user": [
+			{
+				"host": "192.168.221.37",
+				"port": "3350++",
+				"clusterCount": 2
+			}
+		]
+	}
+}

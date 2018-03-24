@@ -1,0 +1,184 @@
+{
+  "appenders": [
+    {
+      "type": "console"
+    },
+    {
+      "type": "logstashUDP",
+      "host": "192.168.221.37",
+      "port": 60090,
+      "layout": {
+        "type": "messagePassThrough"
+      },
+      "fields": {
+        "sid": "${opts:serverId}"
+      },
+      "category": "con-log"
+    },
+    {
+      "type": "logstashUDP",
+      "host": "192.168.221.37",
+      "port": 60090,
+      "layout": {
+        "type": "messagePassThrough"
+      },
+      "fields": {
+        "sid": "${opts:serverId}"
+      },
+      "category": "rpc-log"
+    },
+    {
+      "type": "logstashUDP",
+      "host": "192.168.221.37",
+      "port": 60090,
+      "layout": {
+        "type": "messagePassThrough"
+      },
+      "fields": {
+        "sid": "${opts:serverId}"
+      },
+      "category": "forward-log"
+    },
+    {
+      "type": "logstashUDP",
+      "host": "192.168.221.37",
+      "port": 60090,
+      "layout": {
+        "type": "messagePassThrough"
+      },
+      "fields": {
+        "sid": "${opts:serverId}"
+      },
+      "category": "admin-log"
+    },
+    {
+      "type": "logstashUDP",
+      "host": "192.168.221.37",
+      "port": 60090,
+      "layout": {
+        "type": "messagePassThrough"
+      },
+      "fields": {
+        "sid": "${opts:serverId}"
+      },
+      "category": "pomelo"
+    },
+    {
+      "type": "logstashUDP",
+      "host": "192.168.221.37",
+      "port": 60090,
+      "layout": {
+        "type": "messagePassThrough"
+      },
+      "fields": {
+        "sid": "${opts:serverId}"
+      },
+      "category": "pomelo-admin"
+    },
+    {
+      "type": "logstashUDP",
+      "host": "192.168.221.37",
+      "port": 60090,
+      "layout": {
+        "type": "messagePassThrough"
+      },
+      "fields": {
+        "sid": "${opts:serverId}"
+      },
+      "category": "pomelo-rpc"
+    },
+    {
+      "type": "logstashUDP",
+      "host": "192.168.221.37",
+      "port": 60090,
+      "layout": {
+        "type": "messagePassThrough"
+      },
+      "fields": {
+        "sid": "${opts:serverId}"
+      },
+      "category": "connector"
+    },
+    {
+      "type": "logstashUDP",
+      "host": "192.168.221.37",
+      "port": 60090,
+      "layout": {
+        "type": "messagePassThrough"
+      },
+      "fields": {
+        "sid": "${opts:serverId}"
+      },
+      "category": "route"
+    },
+    {
+      "type": "logstashUDP",
+      "host": "192.168.221.37",
+      "port": 60090,
+      "layout": {
+        "type": "messagePassThrough"
+      },
+      "fields": {
+        "sid": "${opts:serverId}"
+      },
+      "category": "push"
+    },
+    {
+      "type": "logstashUDP",
+      "host": "192.168.221.37",
+      "port": 60090,
+      "layout": {
+        "type": "messagePassThrough"
+      },
+      "fields": {
+        "sid": "${opts:serverId}"
+      },
+      "category": "timer"
+    },
+    {
+      "type": "logstashUDP",
+      "host": "192.168.221.37",
+      "port": 60090,
+      "layout": {
+        "type": "messagePassThrough"
+      },
+      "fields": {
+        "sid": "${opts:serverId}"
+      },
+      "category": "gate"
+    },
+    {
+      "type": "logstashUDP",
+      "host": "192.168.221.37",
+      "port": 60090,
+      "layout": {
+        "type": "messagePassThrough"
+      },
+      "fields": {
+        "sid": "${opts:serverId}"
+      },
+      "category": "fgame"
+    },
+    {
+      "type": "logstashUDP",
+      "host": "192.168.221.37",
+      "port": 60090,
+      "layout": {
+        "type": "messagePassThrough"
+      },
+      "fields": {
+        "sid": "${opts:serverId}"
+      },
+      "category": "user"
+    }
+  ],
+
+  "levels" : {
+    "rpc-log" : "ERROR",
+    "forward-log": "ERROR"
+  },
+
+  "replaceConsole": true,
+
+  "lineDebug": false
+}

@@ -1,0 +1,39 @@
+{
+  "mongo": {
+    "url": "mongodb://root:ddz2018NB@dds-2ze18328a3077e741.mongodb.rds.aliyuncs.com:3717,dds-2ze18328a3077e742.mongodb.rds.aliyuncs.com:3717/chess?replicaSet=mgset-5192003&authSource=admin"
+  },
+  "redis": {
+    "host": "r-2zef04229a789c04.redis.rds.aliyuncs.com",
+    "port": 6379,
+    "defaultDB": 1,
+    "rankDB": 2,
+    "password": "2zef04229a789c04:ddz2018NB",
+    "prefix": "PS:"
+  },
+  "log": {
+    "console": {
+      "level": "debug",
+      "silent": false,
+      "colorize": true
+    },
+    "mongodb": {
+      "level": "info",
+      "silent": false,
+      "db": "mongodb://root:ddz2018NB@dds-2ze18328a3077e741.mongodb.rds.aliyuncs.com:3717,dds-2ze18328a3077e742.mongodb.rds.aliyuncs.com:3717/log?replicaSet=mgset-5192003&authSource=admin",
+      "options": {
+        "poolSize": 2, 
+        "autoReconnect": true
+      },
+      "collection": "gamelog",
+      "storeHost": true,
+      "tryReconnect": true
+    }
+  },
+  "esearch": {
+    "host": "192.168.221.38",
+    "auth": "elastic:dengzhao",
+    "protocol": "http",
+    "port": 9200,
+    "log": "trace"
+  }
+}
